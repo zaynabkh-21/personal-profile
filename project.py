@@ -15,7 +15,7 @@ elif age<30 and GPA>=2.5:
     print("your eligible for an internship in",FOI)
 else :
     print("sorry maybe later you can register to our company ")
-    print(" please apply again later ")
+    print(" please apply again later on ")
 
 
 

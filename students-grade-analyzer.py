@@ -20,3 +20,13 @@ def display_students_summary(number_of_students,name,grade):
     print("Names: \t\t\t\t Grades:")
     for i in range(number_of_students):
         print(name[i], "\t", grade[i])
+
+#function to get avarage grade of the class 
+def get_avg_grade(number_of_students,grade):
+    avg_grade=0
+    sum_of_grade=0
+    for i in range (number_of_students):
+        sum_of_grade=sum_of_grade+grade[i]
+    avg_grade=sum_of_grade/number_of_students
+    return avg_grade
+ 

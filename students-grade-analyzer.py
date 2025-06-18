@@ -59,3 +59,7 @@ print(get_avg_grade(num_of_students,student_grade))
 
 #call the function get_heighest_grade
 get_heighest_grade(num_of_students,student_name,student_grade)
+
+print("The number of students who passed are :")
+#call the function count_passed
+print(count_passed(num_of_students,student_grade,num_of_students,0))

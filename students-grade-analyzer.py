@@ -45,7 +45,7 @@ def get_heighest_grade(number_of_students,name,grade):
           for j in range (len(student_of_heighst_grade)):
               print(student_of_heighst_grade[j])
         else:
-          return "the heighst grade is for ",student_of_heighst_grade[i],"of grade ",heighst_grade)
+          return "the heighst grade is for ",student_of_heighst_grade[i],"of grade ",heighst_grade
 
 
 

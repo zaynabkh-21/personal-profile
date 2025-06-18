@@ -39,3 +39,13 @@ def get_heighest_grade(number_of_students,name,grade):
             heighst_grade=grade[i]
             student_of_heighst_grade=name[i]
     print( "the heighst grade is for ",student_of_heighst_grade,"of grade is ",heighst_grade)
+
+#recursive function to count the number of students with grade >=60
+def count_passed(number_of_students,grade,count_students,i):
+   if number_of_students==0:
+     return count_students
+   else :
+     if grade[i]<60 :
+       count_students -=1
+       i=i+1
+     return count_passed(number_of_students-1,grade,count_students,i)

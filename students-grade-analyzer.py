@@ -38,14 +38,13 @@ def get_heighest_grade(number_of_students,name,grade):
         if grade[i]>=heighst_grade:
             heighst_grade=grade[i]
             student_of_heighst_grade.append(name[i])
-   
-    for i in range (len(student_of_heighst_grade)):
-        if len(student_of_heighst_grade)>1:
+        #if there is more than one of the same grade 
+    if len(student_of_heighst_grade)>1 :
           print("the highest grade ",heighst_grade,"are for the following students: ")
           for j in range (len(student_of_heighst_grade)):
               print(student_of_heighst_grade[j])
-        else:
-          return "the heighst grade is for ",student_of_heighst_grade[i],"of grade ",heighst_grade
+    elif len(student_of_heighst_grade)==1:
+          print( "the heighst grade is for ",student_of_heighst_grade[0],"of grade ",heighst_grade)
 
 
 

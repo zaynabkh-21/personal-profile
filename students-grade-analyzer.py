@@ -33,12 +33,14 @@ def get_avg_grade(number_of_students,grade):
 #function to get highest grade of the class
 def get_heighest_grade(number_of_students,name,grade):
     heighst_grade=0
-    student_of_heighst_grade=""
+    student_of_heighst_grade=[]
     for i in range (number_of_students):
-        if grade[i]>heighst_grade:
+        if grade[i]>=heighst_grade:
             heighst_grade=grade[i]
-            student_of_heighst_grade=name[i]
-    print( "the heighst grade is for ",student_of_heighst_grade,"of grade is ",heighst_grade)
+            student_of_heighst_grade.append(name[i])
+    for i in range (len(student_of_heighst_grade)):
+        
+        print( "the heighst grade is for ",student_of_heighst_grade[i],"of grade is ",heighst_grade)
 
 #recursive function to count the number of students with grade >=60
 def count_passed(number_of_students,grade,count_students,i):

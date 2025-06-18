@@ -52,3 +52,7 @@ def count_passed(number_of_students,grade,count_students,i):
 
 #call the function display_students_name
 display_students_summary(num_of_students,student_name,student_grade)
+
+print("The avg grade of the class :")
+#call the function get_avg_grade
+print(get_avg_grade(num_of_students,student_grade))

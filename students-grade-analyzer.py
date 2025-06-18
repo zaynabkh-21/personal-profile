@@ -49,3 +49,6 @@ def count_passed(number_of_students,grade,count_students,i):
        count_students -=1
        i=i+1
      return count_passed(number_of_students-1,grade,count_students,i)
+
+#call the function display_students_name
+display_students_summary(num_of_students,student_name,student_grade)

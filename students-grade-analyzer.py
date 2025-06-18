@@ -15,3 +15,8 @@ for i in range(num_of_students):
             print("invalid grade")
             student_grade.append(float(input()))
 
+#function to display students summary list
+def display_students_summary(number_of_students,name,grade):
+    print("Names: \t\t\t\t Grades:")
+    for i in range(number_of_students):
+        print(name[i], "\t", grade[i])

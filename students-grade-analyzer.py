@@ -45,8 +45,8 @@ def count_passed(number_of_students,grade,count_students,i):
    if number_of_students==0:
      return count_students
    else :
-     if grade[i]<60 :
-       count_students -=1
+     if grade[i]>=60 :
+       count_students +=1
        i=i+1
      return count_passed(number_of_students-1,grade,count_students,i)
 
@@ -62,4 +62,4 @@ get_heighest_grade(num_of_students,student_name,student_grade)
 
 print("The number of students who passed are :")
 #call the function count_passed
-print(count_passed(num_of_students,student_grade,num_of_students,0))
+print(count_passed(num_of_students,student_grade,0,0))

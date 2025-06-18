@@ -17,7 +17,7 @@ for i in range(num_of_students):
 
 #function to display students summary list
 def display_students_summary(number_of_students,name,grade):
-    print("Names: \t\t\t\t Grades:")
+    print("Names: \t\t\t Grades:")
     for i in range(number_of_students):
         print(name[i], "\t", grade[i])
 
@@ -63,3 +63,12 @@ get_heighest_grade(num_of_students,student_name,student_grade)
 print("The number of students who passed are :")
 #call the function count_passed
 print(count_passed(num_of_students,student_grade,0,0))
+
+#the prgram works as expected 
+#user enters the number of students and their name and grade
+#the program display the list of name and grade of the students
+#the program display the average grade of the class
+#the program display the highest grade of the class
+#the program count recursivly the number of students who passed (grade>=60)
+#taking into consideration the time complexity of the program
+

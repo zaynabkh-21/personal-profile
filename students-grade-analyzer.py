@@ -56,3 +56,6 @@ display_students_summary(num_of_students,student_name,student_grade)
 print("The avg grade of the class :")
 #call the function get_avg_grade
 print(get_avg_grade(num_of_students,student_grade))
+
+#call the function get_heighest_grade
+get_heighest_grade(num_of_students,student_name,student_grade)

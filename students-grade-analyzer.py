@@ -30,3 +30,12 @@ def get_avg_grade(number_of_students,grade):
     avg_grade=sum_of_grade/number_of_students
     return avg_grade
  
+#function to get highest grade of the class
+def get_heighest_grade(number_of_students,name,grade):
+    heighst_grade=0
+    student_of_heighst_grade=""
+    for i in range (number_of_students):
+        if grade[i]>heighst_grade:
+            heighst_grade=grade[i]
+            student_of_heighst_grade=name[i]
+    print( "the heighst grade is for ",student_of_heighst_grade,"of grade is ",heighst_grade)

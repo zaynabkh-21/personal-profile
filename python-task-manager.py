@@ -83,3 +83,35 @@ task_list=[]
 print("enter the task ,duration and priority for each task:")
 insert_task(task_list, num_tasks)
 print("Tasks added")
+
+
+while not is_empty(task_list):
+ print("Current tasks:")
+ for task in task_list:
+    print(task)
+ print("what do you want to do next?")
+ print("1. Complete next task")
+ print("2. search a task")
+ print("3.see the tasks from less duration to more duration")
+ task_choice = input("Enter your choice (1/2/3): ")
+ if task_choice == "1":
+    complete_next_task(task_list)
+ elif task_choice == "2":
+    print("Enter the task you want to search:")
+    search_task = input()
+    search_for_task_result = search_for_task(task_list, search_task)
+    if search_for_task_result is not None:
+        print("Task found:", search_for_task_result)
+    else:
+        print("Task not found.")
+ elif task_choice == "3":
+    print("Tasks sorted by duration:")
+    task_list = sort_tasks(task_list)
+    for task in task_list:
+        print(task)
+ else:
+    print("Invalid choice. Please try again.")
+
+
+print("No more tasks to complete.")
+print("Thank you for using the Task Manager!")

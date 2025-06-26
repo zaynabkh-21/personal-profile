@@ -49,3 +49,17 @@ def complete_next_task(task_list):
         task = extract(task_list)
         print("Completed task:", task)
 
+#search for a task using binary search
+def search_for_task(task_list, search_task):
+    low=0
+    high=len(task_list)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if task_list[mid][0] == search_task:
+            return task_list[mid]
+        elif task_list[mid][0] < search_task:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+

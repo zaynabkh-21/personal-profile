@@ -20,3 +20,10 @@ def extract(task_list):
     lowest_priority_indx = get_min_priority_index(task_list)
     return task_list.pop(lowest_priority_indx)
  
+#create the priotiy queue peek
+def peek(task_list):
+    if len(task_list) == 0:
+        return
+    lowest_priority_indx = get_min_priority_index(task_list)
+    return task_list[lowest_priority_indx]
+ 

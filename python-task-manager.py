@@ -12,3 +12,11 @@ def get_min_priority_index(task_list):
             lowest_priority = task_list[i][2]
             lowest_priority_indx = i
     return lowest_priority_indx
+
+#create the priotiy queue extraction
+def extract(task_list):
+    if len(task_list) == 0:
+        return 
+    lowest_priority_indx = get_min_priority_index(task_list)
+    return task_list.pop(lowest_priority_indx)
+ 

@@ -40,4 +40,12 @@ def insert_task(task_list, num_tasks):
         priority = int(input("Priority (lower number = higher priority): "))
         insert(task_list, (name, duration, priority))
 
- 
+
+# Function to extract the completed task from the priority queue
+def complete_next_task(task_list):
+    if is_empty(task_list):
+        print("No tasks to complete.")
+    else:
+        task = extract(task_list)
+        print("Completed task:", task)
+

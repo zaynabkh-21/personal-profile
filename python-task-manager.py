@@ -26,4 +26,9 @@ def peek(task_list):
         return
     lowest_priority_indx = get_min_priority_index(task_list)
     return task_list[lowest_priority_indx]
+
+#check if the priority queue is empty
+def is_empty(task_list):
+    return len(task_list) == 0
+
  

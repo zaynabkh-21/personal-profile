@@ -31,4 +31,13 @@ def peek(task_list):
 def is_empty(task_list):
     return len(task_list) == 0
 
+#insert multiple tasks into the priority queue
+def insert_task(task_list, num_tasks):
+    for i in range(num_tasks):
+        print("enter task", i+1, ":")
+        name = input("Task a valid name: ")
+        duration = input("Duration(min):")
+        priority = int(input("Priority (lower number = higher priority): "))
+        insert(task_list, (name, duration, priority))
+
  

@@ -74,3 +74,8 @@ def sort_tasks(task_list):
         task_list[j + 1] = key_task
     return task_list
 
+# Main program
+print("Welcome to the Task Manager!")
+print("enter the number of tasks you want to add:")
+num_tasks=int(input())
+task_list=[]

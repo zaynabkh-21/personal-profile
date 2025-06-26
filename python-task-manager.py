@@ -79,3 +79,7 @@ print("Welcome to the Task Manager!")
 print("enter the number of tasks you want to add:")
 num_tasks=int(input())
 task_list=[]
+
+print("enter the task ,duration and priority for each task:")
+insert_task(task_list, num_tasks)
+print("Tasks added")

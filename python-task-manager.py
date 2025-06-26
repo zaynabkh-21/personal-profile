@@ -62,4 +62,15 @@ def search_for_task(task_list, search_task):
         else:
             high = mid - 1
 
+# Sort tasks by duration using insertion sort   
+def sort_tasks(task_list): 
+    for i in range(1, len(task_list)):
+        key_task = task_list[i]
+        key_duration = int(key_task[1])
+        j = i - 1
+        while j >= 0 and int(task_list[j][1]) > key_duration:
+            task_list[j + 1] = task_list[j]
+            j -= 1
+        task_list[j + 1] = key_task
+    return task_list
 

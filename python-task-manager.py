@@ -36,6 +36,10 @@ def insert_task(task_list, num_tasks):
     for i in range(num_tasks):
         print("enter task", i+1, ":")
         name = str(input("Task a valid name: "))
+        #validate task name
+        while name == "":
+            print("Task name cannot be empty. Please enter a valid name.")
+            name = str(input("Task a valid name: "))
         duration = int(input("Duration(min):"))
         priority = int(input("Priority (lower number = higher priority): "))
         insert(task_list, (name, duration, priority))
@@ -60,7 +64,7 @@ def sort_tasks_by_name(task_list):
             j -= 1
         task_list[j + 1] = key_task
     return task_list
-#search for a task using binary search 
+#search for a task using binary search
 def search_for_task(task_list, search_task):
     # Sort the task list by name before binary search
     sort_tasks_by_name(task_list)

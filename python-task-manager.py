@@ -35,8 +35,8 @@ def is_empty(task_list):
 def insert_task(task_list, num_tasks):
     for i in range(num_tasks):
         print("enter task", i+1, ":")
-        name = input("Task a valid name: ")
-        duration = input("Duration(min):")
+        name = str(input("Task a valid name: "))
+        duration = int(input("Duration(min):"))
         priority = int(input("Priority (lower number = higher priority): "))
         insert(task_list, (name, duration, priority))
 
@@ -49,10 +49,23 @@ def complete_next_task(task_list):
         task = extract(task_list)
         print("Completed task:", task)
 
-#search for a task using binary search
+
+#sort the task_list by task name before searching
+def sort_tasks_by_name(task_list):
+    for i in range(1, len(task_list)):
+        key_task = task_list[i]
+        j = i - 1
+        while j >= 0 and task_list[j][0] > key_task[0]:
+            task_list[j + 1] = task_list[j]
+            j -= 1
+        task_list[j + 1] = key_task
+    return task_list
+#search for a task using binary search 
 def search_for_task(task_list, search_task):
-    low=0
-    high=len(task_list)-1
+    # Sort the task list by name before binary search
+    sort_tasks_by_name(task_list)
+    low = 0
+    high = len(task_list) - 1
     while low <= high:
         mid = (low + high) // 2
         if task_list[mid][0] == search_task:

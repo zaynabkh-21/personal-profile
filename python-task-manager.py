@@ -40,8 +40,16 @@ def insert_task(task_list, num_tasks):
         while name == "":
             print("Task name cannot be empty. Please enter a valid name.")
             name = str(input("Task a valid name: "))
+        #validate task duration
         duration = int(input("Duration(min):"))
+        while duration <= 0:
+            print("enter a valid duration.")
+            duration = int(input("Duration(min):"))
+        #validate task priority
         priority = int(input("Priority (lower number = higher priority): "))
+        while priority < 0:
+            print("enter a valid priority.")
+            priority = int(input("Priority (lower number = higher priority): "))
         insert(task_list, (name, duration, priority))
 
 

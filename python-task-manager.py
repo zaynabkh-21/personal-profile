@@ -5,6 +5,7 @@ def insert(task_list, task):
 #define the priotiy queue (get highest priority)
 def get_min_priority_index(task_list):
     
+
     lowest_priority_indx = 0
     lowest_priority = task_list[0][2] 
     for i in range(1,len(task_list)):
